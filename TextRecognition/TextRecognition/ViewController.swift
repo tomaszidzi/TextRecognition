@@ -31,6 +31,8 @@ class ViewController: UIViewController {
             resultTextView.text = textResult
         }
     }
+    
+    
 }
 
 // MARK: - Actions
@@ -50,7 +52,12 @@ extension ViewController {
     }
     
     @IBAction func saveDidTap(_ sender: Any) {
+        guard let image = previewImageView.image,
+            let imageUrl = image.saveImage(),
+            let text = resultTextView.text, !text.isEmpty else { return }
         
+        let object = Recognized(text: text, imagePath: imageUrl)
+        PresistenceManager.save(object: object)
     }
     
     @IBAction func historyDidTap(_ sender: Any) {
@@ -77,3 +84,5 @@ extension ViewController: UITextViewDelegate {
         saveButton.isEnabled = !textView.text.isEmpty
     }
 }
+
+
