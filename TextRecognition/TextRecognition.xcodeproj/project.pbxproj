@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,6 +14,8 @@
 		F3643DC62437840600794F74 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3643DC42437840600794F74 /* Main.storyboard */; };
 		F3643DC82437840900794F74 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3643DC72437840900794F74 /* Assets.xcassets */; };
 		F3643DCB2437840900794F74 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3643DC92437840900794F74 /* LaunchScreen.storyboard */; };
+		F3643DD52437959A00794F74 /* tessdata in Resources */ = {isa = PBXBuildFile; fileRef = F3643DD42437959A00794F74 /* tessdata */; };
+		F3643DD824379B6F00794F74 /* UIImageExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3643DD724379B6F00794F74 /* UIImageExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		F3643DC72437840900794F74 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F3643DCA2437840900794F74 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F3643DCC2437840900794F74 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F3643DD42437959A00794F74 /* tessdata */ = {isa = PBXFileReference; lastKnownFileType = folder; path = tessdata; sourceTree = "<group>"; };
+		F3643DD724379B6F00794F74 /* UIImageExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,7 +60,6 @@
 				410E2344F8622B7FAFFDC403 /* Pods-TextRecognition.debug.xcconfig */,
 				86E378D74AADCED916083A40 /* Pods-TextRecognition.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -81,6 +84,8 @@
 		F3643DBD2437840600794F74 /* TextRecognition */ = {
 			isa = PBXGroup;
 			children = (
+				F3643DD624379B4600794F74 /* Extensions */,
+				F3643DD42437959A00794F74 /* tessdata */,
 				F3643DBE2437840600794F74 /* AppDelegate.swift */,
 				F3643DC02437840600794F74 /* SceneDelegate.swift */,
 				F3643DC22437840600794F74 /* ViewController.swift */,
@@ -90,6 +95,14 @@
 				F3643DCC2437840900794F74 /* Info.plist */,
 			);
 			path = TextRecognition;
+			sourceTree = "<group>";
+		};
+		F3643DD624379B4600794F74 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				F3643DD724379B6F00794F74 /* UIImageExtensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -153,6 +166,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F3643DCB2437840900794F74 /* LaunchScreen.storyboard in Resources */,
+				F3643DD52437959A00794F74 /* tessdata in Resources */,
 				F3643DC82437840900794F74 /* Assets.xcassets in Resources */,
 				F3643DC62437840600794F74 /* Main.storyboard in Resources */,
 			);
@@ -210,6 +224,7 @@
 				F3643DC32437840600794F74 /* ViewController.swift in Sources */,
 				F3643DBF2437840600794F74 /* AppDelegate.swift in Sources */,
 				F3643DC12437840600794F74 /* SceneDelegate.swift in Sources */,
+				F3643DD824379B6F00794F74 /* UIImageExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
