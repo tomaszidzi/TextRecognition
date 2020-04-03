@@ -39,21 +39,36 @@
                                     <action selector="recognizeDidTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WBf-sU-Xq6"/>
                                 </connections>
                             </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6M3-rc-1uj">
+                                <rect key="frame" x="20" y="478.5" width="374" height="363.5"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="nfr-eo-TM1"/>
+                                </connections>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="6M3-rc-1uj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="1Vm-bo-iic"/>
                             <constraint firstItem="5cx-g6-HQg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="5lF-cv-80Y"/>
                             <constraint firstItem="dv4-2q-Kq8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="BRT-hh-bZx"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="6M3-rc-1uj" secondAttribute="trailing" constant="20" id="FF1-7m-CRd"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dv4-2q-Kq8" secondAttribute="trailing" constant="20" id="G8V-rj-M8b"/>
+                            <constraint firstItem="6M3-rc-1uj" firstAttribute="top" secondItem="HsN-Oa-v4h" secondAttribute="bottom" constant="20" id="MTQ-wT-CxD"/>
                             <constraint firstItem="HsN-Oa-v4h" firstAttribute="top" secondItem="dv4-2q-Kq8" secondAttribute="bottom" constant="20" id="Upf-w5-PJv"/>
                             <constraint firstItem="dv4-2q-Kq8" firstAttribute="top" secondItem="5cx-g6-HQg" secondAttribute="bottom" constant="40" id="V3X-EF-gtU"/>
                             <constraint firstItem="5cx-g6-HQg" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Vis-nJ-xge"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="6M3-rc-1uj" secondAttribute="bottom" constant="20" id="gae-0A-djY"/>
                             <constraint firstItem="HsN-Oa-v4h" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="svd-Kb-tNQ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="previewImageView" destination="dv4-2q-Kq8" id="o7h-bk-OKb"/>
+                        <outlet property="resultTextView" destination="6M3-rc-1uj" id="jFm-Ju-x0z"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
