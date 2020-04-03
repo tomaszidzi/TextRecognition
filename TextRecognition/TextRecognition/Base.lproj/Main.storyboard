@@ -32,7 +32,7 @@
                                     <constraint firstAttribute="width" secondItem="dv4-2q-Kq8" secondAttribute="height" multiplier="4:3" id="K2T-a5-hFC"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HsN-Oa-v4h">
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HsN-Oa-v4h">
                                 <rect key="frame" x="171" y="428.5" width="72" height="30"/>
                                 <state key="normal" title="Recognize"/>
                                 <connections>
@@ -40,7 +40,7 @@
                                 </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6M3-rc-1uj">
-                                <rect key="frame" x="20" y="478.5" width="374" height="363.5"/>
+                                <rect key="frame" x="20" y="478.5" width="374" height="333.5"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -49,31 +49,59 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="nfr-eo-TM1"/>
                                 </connections>
                             </textView>
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ori-Ur-MZO">
+                                <rect key="frame" x="20" y="832" width="177" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="4WL-WM-dur"/>
+                                </constraints>
+                                <state key="normal" title="Save"/>
+                                <connections>
+                                    <action selector="saveDidTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="F2i-2L-Yy4"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FnS-Xa-FuH">
+                                <rect key="frame" x="217" y="832" width="177" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="98H-KM-w4v"/>
+                                </constraints>
+                                <state key="normal" title="History"/>
+                                <connections>
+                                    <action selector="historyDidTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iwq-3s-j5h"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="6M3-rc-1uj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="1Vm-bo-iic"/>
+                            <constraint firstItem="FnS-Xa-FuH" firstAttribute="width" secondItem="ori-Ur-MZO" secondAttribute="width" id="3xS-I0-Otj"/>
                             <constraint firstItem="5cx-g6-HQg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="5lF-cv-80Y"/>
                             <constraint firstItem="dv4-2q-Kq8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="BRT-hh-bZx"/>
+                            <constraint firstItem="FnS-Xa-FuH" firstAttribute="leading" secondItem="ori-Ur-MZO" secondAttribute="trailing" constant="20" id="DJV-8D-21o"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="6M3-rc-1uj" secondAttribute="trailing" constant="20" id="FF1-7m-CRd"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dv4-2q-Kq8" secondAttribute="trailing" constant="20" id="G8V-rj-M8b"/>
                             <constraint firstItem="6M3-rc-1uj" firstAttribute="top" secondItem="HsN-Oa-v4h" secondAttribute="bottom" constant="20" id="MTQ-wT-CxD"/>
+                            <constraint firstItem="ori-Ur-MZO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="RiZ-h5-54z"/>
                             <constraint firstItem="HsN-Oa-v4h" firstAttribute="top" secondItem="dv4-2q-Kq8" secondAttribute="bottom" constant="20" id="Upf-w5-PJv"/>
                             <constraint firstItem="dv4-2q-Kq8" firstAttribute="top" secondItem="5cx-g6-HQg" secondAttribute="bottom" constant="40" id="V3X-EF-gtU"/>
                             <constraint firstItem="5cx-g6-HQg" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Vis-nJ-xge"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="6M3-rc-1uj" secondAttribute="bottom" constant="20" id="gae-0A-djY"/>
+                            <constraint firstItem="FnS-Xa-FuH" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="fn5-ig-ENb"/>
+                            <constraint firstItem="ori-Ur-MZO" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="ouJ-7j-2LH"/>
                             <constraint firstItem="HsN-Oa-v4h" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="svd-Kb-tNQ"/>
+                            <constraint firstItem="ori-Ur-MZO" firstAttribute="top" secondItem="6M3-rc-1uj" secondAttribute="bottom" constant="20" id="z5K-4g-yDG"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="FnS-Xa-FuH" secondAttribute="trailing" constant="20" id="zJD-wo-ZIs"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="previewImageView" destination="dv4-2q-Kq8" id="o7h-bk-OKb"/>
+                        <outlet property="rectognizeButton" destination="HsN-Oa-v4h" id="h3N-xn-ZP8"/>
                         <outlet property="resultTextView" destination="6M3-rc-1uj" id="jFm-Ju-x0z"/>
+                        <outlet property="saveButton" destination="ori-Ur-MZO" id="GXA-mr-WxD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-171" y="123"/>
+            <point key="canvasLocation" x="-171.01449275362319" y="122.54464285714285"/>
         </scene>
     </scenes>
     <resources>

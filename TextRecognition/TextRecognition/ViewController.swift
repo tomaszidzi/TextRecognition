@@ -14,6 +14,8 @@ class ViewController: UIViewController {
     // MARK: - Outlets
     @IBOutlet weak var previewImageView: UIImageView!
     @IBOutlet weak var resultTextView: UITextView!
+    @IBOutlet weak var saveButton: UIButton!
+    @IBOutlet weak var rectognizeButton: UIButton!
     
     // MARK: - ViewController life cycle
     override func viewDidLoad() {
@@ -46,6 +48,14 @@ extension ViewController {
             recognizeText(with: image)
         }
     }
+    
+    @IBAction func saveDidTap(_ sender: Any) {
+        
+    }
+    
+    @IBAction func historyDidTap(_ sender: Any) {
+        
+    }
 }
 
 // MARK: - UIImagePickerControllerDelegate
@@ -56,6 +66,7 @@ extension ViewController: UIImagePickerControllerDelegate, UINavigationControlle
         guard let image = info[UIImagePickerController.InfoKey(rawValue: UIImagePickerController.InfoKey.originalImage.rawValue)] as? UIImage else { return }
         resultTextView.text = nil
         previewImageView.image = image.setupUpOrientation()
+        rectognizeButton.isEnabled = true
     }
 }
 
@@ -63,6 +74,6 @@ extension ViewController: UIImagePickerControllerDelegate, UINavigationControlle
 // MARK: - UITextViewDelegate
 extension ViewController: UITextViewDelegate {
     func textViewDidChangeSelection(_ textView: UITextView) {
-       //Display posibilities of save text and image
+        saveButton.isEnabled = !textView.text.isEmpty
     }
 }
