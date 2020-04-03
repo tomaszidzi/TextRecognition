@@ -32,7 +32,6 @@ extension UIImage {
         do {
             try data.write(to: url)
             return url
-
         } catch {
             print("Unable to write data (\(error))")
         }
