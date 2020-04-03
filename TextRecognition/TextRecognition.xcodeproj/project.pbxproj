@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8CB1CDA430A5CA4657CD5E82 /* Pods_TextRecognition.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5328C70B8E61FC8E500E5BB1 /* Pods_TextRecognition.framework */; };
 		F3643DBF2437840600794F74 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3643DBE2437840600794F74 /* AppDelegate.swift */; };
 		F3643DC12437840600794F74 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3643DC02437840600794F74 /* SceneDelegate.swift */; };
 		F3643DC32437840600794F74 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3643DC22437840600794F74 /* ViewController.swift */; };
@@ -16,6 +17,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		410E2344F8622B7FAFFDC403 /* Pods-TextRecognition.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TextRecognition.debug.xcconfig"; path = "Target Support Files/Pods-TextRecognition/Pods-TextRecognition.debug.xcconfig"; sourceTree = "<group>"; };
+		5328C70B8E61FC8E500E5BB1 /* Pods_TextRecognition.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TextRecognition.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		86E378D74AADCED916083A40 /* Pods-TextRecognition.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TextRecognition.release.xcconfig"; path = "Target Support Files/Pods-TextRecognition/Pods-TextRecognition.release.xcconfig"; sourceTree = "<group>"; };
 		F3643DBB2437840600794F74 /* TextRecognition.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TextRecognition.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3643DBE2437840600794F74 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F3643DC02437840600794F74 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -31,17 +35,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8CB1CDA430A5CA4657CD5E82 /* Pods_TextRecognition.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		28E29A8309FD18EA872F1AA9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5328C70B8E61FC8E500E5BB1 /* Pods_TextRecognition.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		696506DFA204D5A0925F845C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				410E2344F8622B7FAFFDC403 /* Pods-TextRecognition.debug.xcconfig */,
+				86E378D74AADCED916083A40 /* Pods-TextRecognition.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		F3643DB22437840600794F74 = {
 			isa = PBXGroup;
 			children = (
 				F3643DBD2437840600794F74 /* TextRecognition */,
 				F3643DBC2437840600794F74 /* Products */,
+				696506DFA204D5A0925F845C /* Pods */,
+				28E29A8309FD18EA872F1AA9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -74,9 +99,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F3643DCF2437840900794F74 /* Build configuration list for PBXNativeTarget "TextRecognition" */;
 			buildPhases = (
+				FEC03250D8431A583EFB3B9A /* [CP] Check Pods Manifest.lock */,
 				F3643DB72437840600794F74 /* Sources */,
 				F3643DB82437840600794F74 /* Frameworks */,
 				F3643DB92437840600794F74 /* Resources */,
+				DFCAB4F9124447C01AD2B0F8 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -132,6 +159,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		DFCAB4F9124447C01AD2B0F8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TextRecognition/Pods-TextRecognition-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TextRecognition/Pods-TextRecognition-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TextRecognition/Pods-TextRecognition-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FEC03250D8431A583EFB3B9A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TextRecognition-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F3643DB72437840600794F74 /* Sources */ = {
@@ -282,6 +351,7 @@
 		};
 		F3643DD02437840900794F74 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 410E2344F8622B7FAFFDC403 /* Pods-TextRecognition.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -300,6 +370,7 @@
 		};
 		F3643DD12437840900794F74 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 86E378D74AADCED916083A40 /* Pods-TextRecognition.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
