@@ -61,7 +61,7 @@ extension ViewController {
     }
     
     @IBAction func historyDidTap(_ sender: Any) {
-        
+        performSegue(withIdentifier: "ShowHistory", sender: self)
     }
 }
 
