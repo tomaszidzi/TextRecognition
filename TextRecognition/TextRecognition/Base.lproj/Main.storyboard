@@ -97,11 +97,78 @@
                         <outlet property="rectognizeButton" destination="HsN-Oa-v4h" id="h3N-xn-ZP8"/>
                         <outlet property="resultTextView" destination="6M3-rc-1uj" id="jFm-Ju-x0z"/>
                         <outlet property="saveButton" destination="ori-Ur-MZO" id="GXA-mr-WxD"/>
+                        <segue destination="SKh-bl-D6z" kind="presentation" identifier="ShowHistory" id="Fna-ji-xeb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-171.01449275362319" y="122.54464285714285"/>
+        </scene>
+        <!--History View Controller-->
+        <scene sceneID="FDP-BC-4dc">
+            <objects>
+                <viewController id="SKh-bl-D6z" customClass="HistoryViewController" customModule="TextRecognition" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cSG-BX-xRo">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WJJ-Vp-uHJ">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="Vrv-HV-Byc"/>
+                                </constraints>
+                                <state key="normal" title="Close"/>
+                                <connections>
+                                    <action selector="closeDidTap:" destination="SKh-bl-D6z" eventType="touchUpInside" id="Rro-Ve-6lH"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="VQg-H8-mQz">
+                                <rect key="frame" x="0.0" y="44" width="414" height="764"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" textLabel="gOg-ab-c3X" style="IBUITableViewCellStyleDefault" id="iVy-Io-FEq">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="iVy-Io-FEq" id="Chu-QK-stO">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="gOg-ab-c3X">
+                                                    <rect key="frame" x="20" y="0.0" width="374" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="SKh-bl-D6z" id="4Rc-uY-2SX"/>
+                                    <outlet property="delegate" destination="SKh-bl-D6z" id="Sa6-7K-sma"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="VQg-H8-mQz" firstAttribute="leading" secondItem="BxP-0y-70B" secondAttribute="leading" id="817-AG-cqQ"/>
+                            <constraint firstItem="VQg-H8-mQz" firstAttribute="top" secondItem="WJJ-Vp-uHJ" secondAttribute="bottom" id="AoS-0i-cut"/>
+                            <constraint firstItem="WJJ-Vp-uHJ" firstAttribute="top" secondItem="BxP-0y-70B" secondAttribute="top" id="KMk-e3-h7i"/>
+                            <constraint firstItem="BxP-0y-70B" firstAttribute="trailing" secondItem="VQg-H8-mQz" secondAttribute="trailing" id="WFb-jD-iIV"/>
+                            <constraint firstItem="WJJ-Vp-uHJ" firstAttribute="leading" secondItem="BxP-0y-70B" secondAttribute="leading" id="YbW-KV-kZT"/>
+                            <constraint firstItem="BxP-0y-70B" firstAttribute="trailing" secondItem="WJJ-Vp-uHJ" secondAttribute="trailing" id="d3f-Am-Gdq"/>
+                            <constraint firstItem="BxP-0y-70B" firstAttribute="bottom" secondItem="VQg-H8-mQz" secondAttribute="bottom" id="fTo-3S-Qhj"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="BxP-0y-70B"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="VQg-H8-mQz" id="c60-7b-1UR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ddf-lx-5Nt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="954" y="123"/>
         </scene>
     </scenes>
     <resources>
