@@ -21,4 +21,22 @@ extension UIImage {
             return result
         }
     }
+    
+    func saveImage() -> URL? {
+        guard let data = self.pngData()  else { return nil }
+            
+        let documents = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
+        let uniqueIdentifier = UUID().uuidString
+        let url = documents.appendingPathComponent("\(uniqueIdentifier).png")
+
+        do {
+            try data.write(to: url)
+            return url
+
+        } catch {
+            print("Unable to write data (\(error))")
+        }
+        
+        return nil
+    }
 }
