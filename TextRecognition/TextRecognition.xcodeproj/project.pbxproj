@@ -18,6 +18,7 @@
 		F3643DD824379B6F00794F74 /* UIImageExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3643DD724379B6F00794F74 /* UIImageExtensions.swift */; };
 		F3643DDD2437BE1000794F74 /* Recognized.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3643DDC2437BE1000794F74 /* Recognized.swift */; };
 		F3643DE02437BF4800794F74 /* PresistenceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3643DDF2437BF4800794F74 /* PresistenceManager.swift */; };
+		F3643DE32437CCF500794F74 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3643DE22437CCF500794F74 /* HistoryViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		F3643DD724379B6F00794F74 /* UIImageExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtensions.swift; sourceTree = "<group>"; };
 		F3643DDC2437BE1000794F74 /* Recognized.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recognized.swift; sourceTree = "<group>"; };
 		F3643DDF2437BF4800794F74 /* PresistenceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresistenceManager.swift; sourceTree = "<group>"; };
+		F3643DE22437CCF500794F74 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,10 +93,10 @@
 				F3643DDE2437BEEE00794F74 /* Manager */,
 				F3643DDB2437BD1800794F74 /* Model */,
 				F3643DD624379B4600794F74 /* Extensions */,
+				F3643DE12437CCD400794F74 /* ViewControllers */,
 				F3643DD42437959A00794F74 /* tessdata */,
 				F3643DBE2437840600794F74 /* AppDelegate.swift */,
 				F3643DC02437840600794F74 /* SceneDelegate.swift */,
-				F3643DC22437840600794F74 /* ViewController.swift */,
 				F3643DC42437840600794F74 /* Main.storyboard */,
 				F3643DC72437840900794F74 /* Assets.xcassets */,
 				F3643DC92437840900794F74 /* LaunchScreen.storyboard */,
@@ -125,6 +127,15 @@
 				F3643DDF2437BF4800794F74 /* PresistenceManager.swift */,
 			);
 			path = Manager;
+			sourceTree = "<group>";
+		};
+		F3643DE12437CCD400794F74 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				F3643DC22437840600794F74 /* ViewController.swift */,
+				F3643DE22437CCF500794F74 /* HistoryViewController.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -248,6 +259,7 @@
 				F3643DBF2437840600794F74 /* AppDelegate.swift in Sources */,
 				F3643DC12437840600794F74 /* SceneDelegate.swift in Sources */,
 				F3643DD824379B6F00794F74 /* UIImageExtensions.swift in Sources */,
+				F3643DE32437CCF500794F74 /* HistoryViewController.swift in Sources */,
 				F3643DE02437BF4800794F74 /* PresistenceManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -396,6 +408,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HGYW5849U4;
 				INFOPLIST_FILE = TextRecognition/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -415,6 +428,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = HGYW5849U4;
 				INFOPLIST_FILE = TextRecognition/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
